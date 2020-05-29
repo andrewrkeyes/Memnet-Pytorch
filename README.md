@@ -4,7 +4,7 @@ Pytorch implementation of MemNet (http://memorability.csail.mit.edu/index.html)
 Setup:
 1) Install pip dependencies
 ```
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 2) Download LaMem dataset from http://memorability.csail.mit.edu/download.html
 
