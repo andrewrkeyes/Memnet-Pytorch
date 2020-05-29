@@ -8,6 +8,7 @@ import PIL.Image
 root_dir = "lamem/images"
 csv_file = "lamem/splits/val_1.txt"
 
+#Load pretrained MemNet
 model = MemNet()
 checkpoint = torch.load("model.ckpt")
 model.load_state_dict(checkpoint["state_dict"])
@@ -18,8 +19,8 @@ mean = np.load("image_mean.npy")
 transform = transforms.Compose([
     transforms.Resize((256,256), PIL.Image.BILINEAR),
     lambda x: np.array(x),
-    lambda x: np.subtract(x[:,:,[2, 1, 0]], mean),
-    lambda x: x[15:242, 15:242],
+    lambda x: np.subtract(x[:,:,[2, 1, 0]], mean), #Subtract average mean from image (opposite order channels)
+    lambda x: x[15:242, 15:242], #Center crop
     transforms.ToTensor()
 ])
 
