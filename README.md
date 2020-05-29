@@ -6,9 +6,12 @@ Setup:
 ```
 python3 -m pip install -r requirements.txt
 ```
-2) Download LaMem dataset from http://memorability.csail.mit.edu/download.html
-
-3) Modify code to point to a csv file and root image directory
+2) Download pretrained model
+```
+./download_model.sh
+```
+3) Download LaMem dataset from http://memorability.csail.mit.edu/download.html
+4) Modify code to point to a csv file and root image directory
 ```python
 
 import torch
