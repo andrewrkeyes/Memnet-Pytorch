@@ -10,7 +10,7 @@ csv_file = "lamem/splits/val_1.txt"
 
 #Load pretrained MemNet
 model = MemNet()
-checkpoint = torch.utils.model_zoo.load_url("https://github.com/andrewrkeyes/Memnet-Pytorch/raw/master/model.ckpt")
+checkpoint = torch.utils.model_zoo.load_url("https://github.com/andrewrkeyes/Memnet-Pytorch-Model/raw/master/model.ckpt")
 model.load_state_dict(checkpoint["state_dict"])
 
 
